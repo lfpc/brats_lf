@@ -127,7 +127,7 @@ class Trainer_unet:
             if val_loss < self.best_loss:
                 print(f"\n{'#'*20}\nSaved new checkpoint\n{'#'*20}\n")
                 self.best_loss = val_loss
-                torch.save(self.net.state_dict(), "best_model.pth")
+                torch.save(self.net.state_dict(), "best_model_new.pth")
             print()
         self._save_train_history()
             
@@ -337,7 +337,7 @@ class Trainer_autoencoder:
             if val_loss < self.best_loss:
                 print(f"\n{'#'*20}\nSaved new checkpoint\n{'#'*20}\n")
                 self.best_loss = val_loss
-                torch.save(self.net.state_dict(), "autoencoder_best_model.pth")
+                torch.save(self.net.state_dict(), "autoencoder_best_model_new.pth")
             print()
         self._save_train_history()
             
